@@ -5,23 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atria Institute of Technology | Events</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="dark">
 
-<!-- NAVBAR -->
 <header class="navbar">
   <h1 class="logo">Atria<span>Connect</span></h1>
 
   <div class="nav-right">
     <input type="text" placeholder="Search events..." />
 
-    <!-- THEME TOGGLE -->
     <div class="theme-toggle" onclick="toggleTheme()">
       <span class="sun">☀️</span>
       <span class="moon">🌙</span>
@@ -30,7 +25,6 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-text">
     <span class="badge">🔥 Trending</span>
@@ -41,12 +35,10 @@
       Innovation • Culture • Competition.
     </p>
 
-    <!-- HERO BUTTONS -->
     <div class="hero-buttons">
-        <button class="btn primary">Book Now</button>
-        <button class="btn outline" id="viewScheduleBtn">View Schedule</button>
+      <button class="btn primary">Book Now</button>
+      <button class="btn outline" id="viewScheduleBtn">View Schedule</button>
     </div>
-
   </div>
 
   <div class="hero-card">
@@ -55,7 +47,6 @@
   </div>
 </section>
 
-<!-- FILTERS -->
 <section class="filters">
   <button class="filter active" onclick="filterEvents('all', this)">All</button>
   <button class="filter" onclick="filterEvents('technical', this)">Technical</button>
@@ -63,10 +54,9 @@
   <button class="filter" onclick="filterEvents('sports', this)">Sports</button>
 </section>
 
-<!-- EVENTS -->
 <section class="events" id="schedule">
 
-
+  <!-- TECHNICAL -->
   <div class="event-card" data-category="technical">
     <span class="tag">TECHNICAL</span>
     <h4>HackWar 2026</h4>
@@ -75,6 +65,15 @@
     <button onclick="openModal('HackWar 2026')">Register</button>
   </div>
 
+  <div class="event-card" data-category="technical">
+    <span class="tag">TECHNICAL</span>
+    <h4>AI Ideathon</h4>
+    <p>📅 April 15 | 📍 Seminar Hall</p>
+    <strong>₹300</strong>
+    <button onclick="openModal('AI Ideathon')">Register</button>
+  </div>
+
+  <!-- SPORTS -->
   <div class="event-card" data-category="sports">
     <span class="tag">SPORTS</span>
     <h4>Inter-College Hoops</h4>
@@ -83,6 +82,15 @@
     <button onclick="openModal('Inter-College Hoops')">Register</button>
   </div>
 
+  <div class="event-card" data-category="sports">
+    <span class="tag">SPORTS</span>
+    <h4>Pool Party Splash</h4>
+    <p>📅 April 17 | 📍 Atria Pool</p>
+    <strong>₹1200</strong>
+    <button onclick="openModal('Pool Party Splash')">Register</button>
+  </div>
+
+  <!-- CULTURAL -->
   <div class="event-card" data-category="cultural">
     <span class="tag">CULTURAL</span>
     <h4>Nritya Dance Off</h4>
@@ -91,16 +99,33 @@
     <button onclick="openModal('Nritya Dance Off')">Register</button>
   </div>
 
+  <div class="event-card" data-category="cultural">
+    <span class="tag">CULTURAL</span>
+    <h4>Terrace DJ Night</h4>
+    <p>📅 April 16 | 📍 Terrace Arena</p>
+    <strong>₹1500</strong>
+    <button onclick="openModal('Terrace DJ Night')">Register</button>
+  </div>
+
+  <div class="event-card" data-category="cultural">
+    <span class="tag">CULTURAL</span>
+    <h4>Battle of Bands</h4>
+    <p>📅 April 15 | 📍 Open Stage</p>
+    <strong>₹800</strong>
+    <button onclick="openModal('Battle of Bands')">Register</button>
+  </div>
+
 </section>
 
-<!-- MODAL -->
 <div class="modal" id="modal">
   <div class="modal-box">
     <h3 id="modalTitle"></h3>
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Email">
-    <input type="text" placeholder="USN / Roll No">
-    <button onclick="closeModal()">Confirm Registration</button>
+
+    <input type="text" id="nameInput" placeholder="Your Name">
+    <input type="email" id="emailInput" placeholder="Email">
+    <input type="text" id="usnInput" placeholder="USN / Roll No">
+
+    <button id="confirmRegisterBtn">Confirm Registration</button>
   </div>
 </div>
 
@@ -111,3 +136,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
